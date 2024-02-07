@@ -8,6 +8,8 @@ body {
   font-family: "Poppins", sans-serif;
 }
 nav {
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -46,33 +48,37 @@ nav ul li a:hover {
 
 .firstSection > div {
   width: 30%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .leftsection {
   font-size: 3rem;
 }
 
-.leftsection .buttons{
-  padding:50px 0 ;
+.leftsection .buttons {
+  padding: 50px 0;
 }
 .leftsection .btn {
-  padding: 12px;
+  padding: 1.2vh;
   background-color: #9c97f1;
   color: white;
-  border: 2px solid white;
-  border-radius: 6px;
-  font-size: 20px;
+  border: 0.2vh solid white;
+  border-radius: 0.5vh;
+  font-size: 2vh;
   cursor: pointer;
 }
-
-
 
 .rightsection img {
   width: 80%;
   margin: 50px 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 .purple {
   color: rgb(170, 105, 228);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #element {
@@ -99,17 +105,17 @@ main hr {
 
 .secondsection .box {
   background: white;
-  width: 80vw;
-  height: 2px;
-  margin: 56px 0;
+  width: 75%;
+  height: 0.2vw;
+  margin: 4.6vw 0;
   display: flex;
 }
 
 .secondsection .vertical {
-  height: 93px;
-  width: 1px;
+  height: 10vh;
+  width: 0.1vw;
   background-color: white;
-  margin: 0 190px;
+  margin: 0 15vh;
 }
 
 .text-gray {
@@ -117,24 +123,24 @@ main hr {
 }
 
 .image-top {
-  width: 50px;
+  width: 5vh;
   position: relative;
-  top: -50px;
-  left: -9px;
+  top: -5vw;
+  left: -0.5vw;
 }
 
 .vertical-title {
   position: relative;
-  top: 75px;
-  width: 150px;
+  top: 6.5vh;
+  width: 15vh;
 }
 
 .vertical-desc {
   position: relative;
-  top: 86px;
+  top: 8vh;
   color: gray;
-  width: 150px;
-  font-style: 9px;
+  width: 15vh;
+  font-style: normal;
 }
 
 footer {
