@@ -10,11 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 
     <header>
         <nav>
             <div class="left">RSG's Portfolio</div>
-            <div class="right"></div>
+            <div class="right"> <span id="element1"></span></div>
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/">About</a></li>
@@ -24,6 +25,9 @@
         </nav>
     </header>
     <main>
+
+        </div>
+
         <section class="firstSection">
             <div class="leftsection">
                 Namaste, My Name is
@@ -31,8 +35,9 @@
                 <div> & I am Passionate</div>
                 <span id="element"></span>
                 <div class="buttons">
-                 <a href="Rupsagar Gautam Resume.pdf" target="_main"><button class="btn">Download Resume</button></a> 
-                    <a href="https://www.facebook.com/RSGBrandOfficial/" target="_main"><button class="btn">Visit Facebook</button></a>
+                    <a href="Rupsagar Gautam Resume.pdf" target="_main"><button class="btn">Download Resume</button></a>
+                    <a href="https://www.facebook.com/RSGBrandOfficial/" target="_main"><button class="btn">Visit
+                            Facebook</button></a>
                 </div>
             </div>
             </div>
@@ -132,6 +137,15 @@
     var typed = new Typed('#element', {
         strings: ['Web Developer.', 'Graphic Designer.', 'Video Editor.', 'Photographer.'],
         typeSpeed: 50,
+    });
+</script>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<script>
+    var typed = new Typed('#element1', {
+        strings: ['Under Development.', 'Under Progress.', 'Under Construction.', 'Under Maintainance.'],
+        typeSpeed: 1000,
     });
 </script>
 
