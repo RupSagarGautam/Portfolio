@@ -33,11 +33,18 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: white;
+  transition: 0.5s;
 }
 
 nav ul li a:hover {
-  color: rgb(139, 139, 221);
-  font-size: 1.04rem;
+  color: rgb(23, 23, 78);
+  background-color: rgb(215, 221, 250);
+  padding: 3px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 40px;
+  transform: scale(1.2);
+  transition: 0.7s;
 }
 
 .left {
@@ -53,6 +60,9 @@ nav ul li a:hover {
   animation-direction: alternate-reverse;
 }
 
+/* Code For Header Ends Here */
+/* Code For Body Starts Here */
+
 .firstSection {
   display: flex;
   justify-content: space-around;
@@ -61,7 +71,7 @@ nav ul li a:hover {
 }
 
 .firstSection>div {
-  width: 30%;
+  width: 40%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -121,7 +131,7 @@ main hr {
 
 .secondsection .box {
   background: white;
-  width: 75%;
+  width: 100%;
   height: 0.2vw;
   margin: 4.6vw 0;
   display: flex;
@@ -131,7 +141,7 @@ main hr {
   height: 10vh;
   width: 0.1vw;
   background-color: white;
-  margin: 0 15vh;
+  margin: 0 20vh;
 }
 
 .text-gray {
@@ -139,9 +149,9 @@ main hr {
 }
 
 .image-top {
-  width: 5vh;
+  width: 10vh;
   position: relative;
-  top: -5vw;
+  top: -6vw;
   left: -0.5vw;
 }
 
@@ -162,7 +172,6 @@ main hr {
 footer {
   background-color: #0e0e1a;
 }
-
 .footer {
   display: flex;
   padding: 23px 122px;
@@ -173,11 +182,63 @@ footer {
   list-style: none;
 }
 
-.footer>div {
+.footer div {
   width: 223px;
+  
 }
 
-footer .text-center {
+.footer-second a {
   text-align: center;
-  color: rgb(184, 184, 184);
-  padding: 12px 0;}
+  color: aliceblue;
+  display: flex;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.footer-second a:hover{
+  color: rgb(86, 8, 164);
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.text-center{
+  text-align: center;
+  padding: 3px;
+  box-shadow: 0px -2px 3px #e2e2f5;
+}
+
+.footer-third ul li a{
+  color: aliceblue;
+  text-decoration: none;
+  transition: 0.7s
+}
+
+.footer-third ul li a:hover{
+  color: rgb(86, 8, 164);
+  text-decoration: none;
+
+}
+
+.footer-fourth{
+  font-size: 15px;
+}
+
+.Feedbackbtn{
+  background: none;
+  color: #333;
+  font-weight: bold;
+  display: flex;
+  line-height: 20px;
+  padding: 3px;
+  border-radius: 2px 10px 2px 10px;
+  box-shadow: 5px 4px 4px #e2e2f5;
+  font-size: 15px;
+  background-color: #9c97f1;
+  transition: 0.5s;
+}
+
+.Feedbackbtn:hover{
+  transform: scale(0.90);
+  filter: brightness(1.3);
+  filter: contrast(1.5);
+}
