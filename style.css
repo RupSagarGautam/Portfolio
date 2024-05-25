@@ -134,7 +134,8 @@ main hr {
   width: 100%;
   height: 0.2vw;
   margin: 4.6vw 0;
-  display: flex;
+  display: flex; 
+  
 }
 
 .secondsection .vertical {
