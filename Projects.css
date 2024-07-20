@@ -62,3 +62,59 @@
   
   /* Code For Header Ends Here */
   /* Code For Body Starts Here */
+
+  .col-12{
+    text-align: center;
+    margin-top: 50px;
+    font-family: "Poppins";
+    letter-spacing: 5px;
+    transition: 1s;
+  }
+
+  .col-12:hover{
+    color:wheat;
+    letter-spacing: 15px;
+    transition: 1s;
+    
+  }
+  
+  .projects{
+    display: grid;
+    text-align: center;
+  }
+
+  .project1 {
+    
+    height: 275px;
+    border-radius: 30px;
+    border-color: aliceblue;
+    width: auto;
+    margin-left: -1000px;
+    margin-top: 150px;
+  }
+
+
+  .project1 img{
+    height: 275px;
+    border-radius: 30px;
+    border-color: aliceblue;
+    width: auto;
+    transition: 0.4s;
+    margin-left: 50px;
+
+  }
+  .project1 img:hover{
+    height: 275px;
+    border-radius: 30px;
+    border-color: aliceblue;
+    width: auto;
+    margin-left: 50px;
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
+  .project1 p{
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+  }
