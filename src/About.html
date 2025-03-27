@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me - RSG Portfolio</title>
+    <link rel="StyleSheet" href="../styles/style.css" />
+    <link rel="StyleSheet" href="../styles/About.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Add Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/pageTransition.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">RSG's Portfolio</div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="right"> <span id="element1"></span></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/src/About.html">About</a></li>
+                <li><a href="/src/Projects.html">Projects</a></li>
+                <li><a href="/src/Contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="aboutSection">
+            <div class="aboutContent">
+                <h1>About Me</h1>
+                <div class="aboutImage">
+                    <img src="../assets/RSG.jpg" alt="Rupsagar Gautam">
+                </div>
+                <div class="aboutText">
+                    <h2>Rupsagar Gautam</h2>
+                    <p class="tagline">Creative Professional & Digital Artist</p>
+                    
+                    <div class="aboutDescription">
+                        <p>I am a creative professional from Nepal, passionate about bringing ideas to life through visual design and digital media. With a strong foundation in both graphics design and video editing, I specialize in creating compelling visual content that engages and inspires.</p>
+                        
+                        <h3>Professional Journey</h3>
+                        <p>My journey in the creative industry began with a passion for visual storytelling. I've had the privilege of working with organizations like Nepalese Esports Junction, where I've contributed to creating engaging digital content and promotional materials.</p>
+                        
+                        <h3>Expertise</h3>
+                        <ul class="expertiseList">
+                            <li>Graphics Design</li>
+                            <li>Video Editing</li>
+                            <li>Animation</li>
+                            <li>Social Media Content</li>
+                            <li>Thumbnail Design</li>
+                            <li>Banner Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3 style="font-size: 15px;">RSG's Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul style="text-align: left;">
+                    <b style="font-size: 15px; color: aliceblue;">Navigate</b>
+                    <br>
+                    <li><a href="/index.html" target="_blank">Home</a></li>
+                    <li><a href="/src/About.html">About</a></li>
+                    <li><a href="/src/Contact.html">Contact</a></li>
+                    <li><a href="/src/Projects.html">Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <b style="font-size: 15px;">Projects</b>
+                <br><br>
+                <ul>
+                    <li><a href="/src/Projects.html#past">Past Projects</a></li>
+                    <li><a href="/src/Projects.html#current">Current Projects</a></li>
+                    <li><a href="/src/Projects.html#upcoming">Upcoming Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                Feedback
+                <button class="Feedbackbtn" id="FeedbackBtn" onclick="form()">Click Here</button>
+            </div>
+        </div>
+        <div class="text-center">
+            Copyright © rupsagargautam.com.np | All Rights Reserved 2024-26
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element1', {
+            strings: ['Creative Professional.', 'Digital Artist.', 'Visual Storyteller.'],
+            typeSpeed: 1000,
+        });
+    </script>
+</body>
+
+</html> 
