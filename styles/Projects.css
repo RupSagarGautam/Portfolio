@@ -62,6 +62,9 @@
   /* Code For Header Ends Here */
   /* Code For Body Starts Here */
 
+  .projectCategory a{
+    text-decoration: none;
+  }
 .projectsSection {
     padding: 4rem 2rem;
     min-height: 80vh;
