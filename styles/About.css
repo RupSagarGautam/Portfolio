@@ -90,6 +90,60 @@
     color: #64ffda;
 }
 
+.social-media-section {
+    padding: 2rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.social-media-section h2 {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    padding: 1rem;
+}
+
+.social-link i {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+}
+
+.social-link:hover i.fa-linkedin {
+    color: #0077b5;
+}
+
+.social-link:hover i.fa-github {
+    color: #6e5494;
+}
+
+.social-link:hover i.fa-youtube {
+    color: #ff0000;
+}
+
 @media (max-width: 768px) {
     .aboutSection {
         padding: 2rem 1rem;
@@ -106,4 +160,14 @@
     .expertiseList {
         grid-template-columns: 1fr;
     }
-} 
+}
+
+@media (max-width: 600px) {
+    .social-links {
+        gap: 1rem;
+    }
+    
+    .social-link i {
+        font-size: 2rem;
+    }
+}

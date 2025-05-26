@@ -50,6 +50,8 @@
     color: #64ffda;
     margin-right: 1rem;
     font-size: 1.2rem;
+    margin-top: -25px; /* Adjust icon position */
+    flex-shrink: 0;
 }
 
 .socialLinks h3 {
@@ -121,6 +123,105 @@
     background-color: rgba(100, 255, 218, 0.1);
 }
 
+.socialLinks {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.socialLinks h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: #faf5f5;
+}
+
+.socialLinks p {
+    color: #888;
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    min-width: 100px;
+}
+
+.social-link i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link span {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.social-link:hover span {
+    opacity: 1;
+}
+
+.social-link:hover i.fa-linkedin {
+    color: #0077b5;
+    transform: scale(1.1);
+}
+
+.social-link:hover i.fa-github {
+    color: #6e5494;
+    transform: scale(1.1);
+}
+
+.social-link:hover i.fa-youtube {
+    color: #ff0000;
+    transform: scale(1.1);
+}
+
+.social-link:hover i.fa-facebook {
+    color: #1877f2;
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .social-links {
+        gap: 1rem;
+    }
+    
+    .social-link {
+        padding: 0.8rem;
+        min-width: 80px;
+    }
+    
+    .social-link i {
+        font-size: 1.5rem;
+    }
+    
+    .social-link span {
+        font-size: 0.8rem;
+    }
+}
+
 @media (max-width: 768px) {
     .contactContainer {
         grid-template-columns: 1fr;
@@ -135,4 +236,4 @@
     .contactForm h2 {
         font-size: 1.5rem;
     }
-} 
+}
