@@ -1,3 +1,4 @@
+
 .contactSection {
     padding: 4rem 2rem;
     min-height: 80vh;
@@ -64,7 +65,7 @@
     color: #Faf5f6;
 }
 
-.socialIcons {
+.socialIcons a{
     display: flex;
     gap: 1rem;
 }
