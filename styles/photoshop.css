@@ -6,7 +6,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #0f1729 0%, #1a2537 100%);
+    background: linear-gradient(315deg, #020522cc 0%, rgb(0, 0, 33) 100%);
     min-height: 100vh;
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -44,7 +44,7 @@ body {
     min-height: 600px;
     perspective: 1200px;
     overflow: visible;
-    background: rgba(20, 30, 48, 0.7);
+    background: rgb(0, 0, 33);
     backdrop-filter: blur(10px);
     border-radius: 32px;
     box-shadow: 0 25px 80px rgba(0,0,0,0.35);
@@ -85,7 +85,7 @@ body {
     object-fit: cover; /* Keep cover for thumbnails */
     border-radius: 24px;
     transition: transform 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
-    border: 2px solid rgb(231, 221, 221);
+    border: 4px solid rgb(231, 221, 221);
     cursor: zoom-in;
     cursor: pointer;
 }
@@ -118,7 +118,7 @@ body {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
     z-index: 10;
-    border: 3px solid rgb(200, 183, 228);
+    border: 3px 5px 3px 3px solid rgba(34, 7, 78, 0.863);
     transition: 0.7s ;
     
 }
