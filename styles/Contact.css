@@ -46,10 +46,11 @@
     margin-bottom: 1rem;
 }
 
-.contactItem i {
+.contactItem span {
     color: #64ffda;
     margin-right: 1rem;
     font-size: 1.2rem;
+    
     margin-top: -25px; /* Adjust icon position */
 }
 
@@ -161,7 +162,7 @@
     min-width: 100px;
 }
 
-.social-link i {
+.social-link span {
     font-size: 2rem;
     margin-bottom: 0.5rem;
     transition: transform 0.3s ease, color 0.3s ease;
@@ -182,22 +183,22 @@
     opacity: 1;
 }
 
-.social-link:hover i.fa-linkedin {
+.social-link:hover span.fa-linkedin {
     color: #0077b5;
     transform: scale(1.1);
 }
 
-.social-link:hover i.fa-github {
+.social-link:hover span.fa-github {
     color: #6e5494;
     transform: scale(1.1);
 }
 
-.social-link:hover i.fa-youtube {
+.social-link:hover span.fa-youtube {
     color: #ff0000;
     transform: scale(1.1);
 }
 
-.social-link:hover i.fa-facebook {
+.social-link:hover span.fa-facebook {
     color: #1877f2;
     transform: scale(1.1);
 }
@@ -212,7 +213,7 @@
         min-width: 80px;
     }
     
-    .social-link i {
+    .social-link span {
         font-size: 1.5rem;
     }
     
