@@ -59,6 +59,11 @@
     margin-bottom: 1rem;
 }
 
+.social-links {
+    text-decoration: none;
+    color: #Faf5f6;
+}
+
 .socialIcons {
     display: flex;
     gap: 1rem;
