@@ -51,7 +51,6 @@
     margin-right: 1rem;
     font-size: 1.2rem;
     margin-top: -25px; /* Adjust icon position */
-    flex-shrink: 0;
 }
 
 .socialLinks h3 {
