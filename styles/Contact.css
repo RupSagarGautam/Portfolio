@@ -46,12 +46,12 @@
     margin-bottom: 1rem;
 }
 
-.contactItem span {
+.contactItem i {
     color: #64ffda;
     margin-right: 1rem;
     font-size: 1.2rem;
-    
     margin-top: -25px; /* Adjust icon position */
+
 }
 
 .socialLinks h3 {
@@ -153,7 +153,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--text-color);
+    color: #ccd6f6; /* fallback to a visible color */
     text-decoration: none;
     transition: transform 0.3s ease, color 0.3s ease;
     padding: 1rem;
@@ -163,8 +163,9 @@
 }
 
 .social-link i {
+    color: #ccd6f6; /* ensure icon color is visible */
     font-size: 2rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -172,6 +173,7 @@
     font-size: 0.9rem;
     opacity: 0.8;
     transition: opacity 0.3s ease;
+    color: #ccd6f6;
 }
 
 .social-link:hover {
@@ -183,31 +185,24 @@
     opacity: 1;
 }
 
-.social-link:hover i {
+.social-link:hover i.fa-linkedin {
+    color: #0077b5;
     transform: scale(1.1);
 }
 
-.social-link:hover .fa-linkedin {
-    color: #0077b5;
-}
-
-.social-link:hover .fa-github {
+.social-link:hover i.fa-github {
     color: #6e5494;
+    transform: scale(1.1);
 }
 
-.social-link:hover .fa-youtube {
+.social-link:hover i.fa-youtube {
     color: #ff0000;
+    transform: scale(1.1);
 }
 
-.social-link:hover .fa-facebook {
+.social-link:hover i.fa-facebook {
     color: #1877f2;
-}
-
-.social-note {
-    text-align: center;
-    margin-top: 1rem;
-    color: #8892b0;
-    font-size: 0.9rem;
+    transform: scale(1.1);
 }
 
 @media (max-width: 600px) {
@@ -220,7 +215,7 @@
         min-width: 80px;
     }
     
-    .social-link span {
+    .social-link i {
         font-size: 1.5rem;
     }
     
