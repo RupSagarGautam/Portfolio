@@ -162,9 +162,9 @@
     min-width: 100px;
 }
 
-.social-link span {
+.social-link i {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -183,24 +183,31 @@
     opacity: 1;
 }
 
-.social-link:hover span.fa-linkedin {
+.social-link:hover i {
+    transform: scale(1.1);
+}
+
+.social-link:hover .fa-linkedin {
     color: #0077b5;
-    transform: scale(1.1);
 }
 
-.social-link:hover span.fa-github {
+.social-link:hover .fa-github {
     color: #6e5494;
-    transform: scale(1.1);
 }
 
-.social-link:hover span.fa-youtube {
+.social-link:hover .fa-youtube {
     color: #ff0000;
-    transform: scale(1.1);
 }
 
-.social-link:hover span.fa-facebook {
+.social-link:hover .fa-facebook {
     color: #1877f2;
-    transform: scale(1.1);
+}
+
+.social-note {
+    text-align: center;
+    margin-top: 1rem;
+    color: #8892b0;
+    font-size: 0.9rem;
 }
 
 @media (max-width: 600px) {
