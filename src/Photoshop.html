@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+    <title>RSG- Portfolio</title>    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/photoshop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="../js/script.js"></script>    
+</head>
+<body>
+            
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">RSG's Portfolio</div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="right"> <span id="element1"></span></div>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/src/About.html">About</a></li>
+                <li><a href="/src/Projects.html">Projects</a></li>
+                <li><a href="/src/Contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <div class="content-wrapper">
+        <h1 class="page-title">My Photography Portfolio</h1>
+        
+        <div class="slider-container">
+            <div class="slider" id="slider">
+                <!-- Images 1-10 -->
+                <div class="slide">
+                    <img src="../assets/Photography/Picture 1.JPG" alt="Photography" class="gallery-img">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Wedding Photography</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../assets/Photography/Picture 2.JPG" alt="Photography" class="gallery-img">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Wedding Moments</h2>
+                    </div>
+                </div>
+                
+                <div class="slide">
+                    <img src="../assets/Photography/Picture 4.JPG" alt="Photography" class="gallery-img">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Wedding Moments</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../assets/Photography/Picture 5.JPG" alt="Photography" class="gallery-img">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Portrait Photography</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../assets/Photography/Picture 6.JPG" alt="Photography" class="gallery-img">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Child</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../assets/Photography/Picture 8.JPG" alt="Photography" class="gallery-img">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Hawan Moments</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../assets/Photography/Picture 9.JPG" alt="Photography" class="gallery-img">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Hawan Moments</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../assets/Photography/Picture 10.JPG" alt="Photography" class="gallery-img">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Hawan Moments</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../assets/Photography/Picture 11.JPG" alt="Photography" class="gallery-img">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Talk Moments(GufaGu)</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../assets/Photography/Picture 12.JPG" alt="Photography" class="gallery-img">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Marriage </h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../assets/Photography/Picture 13.JPG" alt="Photography" class="gallery-img">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Sindhur Moment </h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../assets/Photography/Picture 15.JPG" alt="Photography" class="gallery-img">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Casual Shot</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../assets/Photography/Picture 16.JPG" alt="Photography" class="gallery-img">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Marriage Bidhii </h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../assets/Photography/Picture 22.JPG" alt="Photography" class="gallery-img">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Candid Moments</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../assets/Photography/Picture 30.JPG" alt="Photography" class="gallery-img">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Special Moments</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../assets/Photography/Picture 35.JPG" alt="Photography" class="gallery-img">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Wedding Celebration</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-nav">
+                <button class="slider-arrow" id="prevBtn" aria-label="Previous">←</button>
+                <div class="slider-dots" id="sliderDots"></div>
+                <button class="slider-arrow" id="nextBtn" aria-label="Next">→</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element1', {
+            strings: ['Web Developer.', 'Graphic Designer.', 'Video Editor.', 'Photographer.'],
+            typeSpeed: 100,
+        });
+
+        // Add hamburger menu functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links li a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.querySelector('.lightbox-close');
+
+        // Add click event to all gallery images
+        document.querySelectorAll('.gallery-img').forEach(img => {
+            img.addEventListener('click', e => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = e.target.src;
+            });
+        });
+
+        // Close lightbox when clicking close button or outside the image
+        lightboxClose.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', e => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+                lightbox.style.display = 'none';
+            }
+        });
+
+        const slider = {
+            slides: document.querySelectorAll('.slide'),
+            current: 0,
+            autoplayInterval: null,
+
+            init() {
+                this.createDots();
+                this.addEventListeners();
+                this.update();
+                this.startAutoplay();
+            },
+
+            createDots() {
+                const dotsContainer = document.getElementById('sliderDots');
+                this.slides.forEach((_, idx) => {
+                    const dot = document.createElement('div');
+                    dot.className = 'slider-dot';
+                    dot.addEventListener('click', () => {
+                        this.goTo(idx);
+                    });
+                    dotsContainer.appendChild(dot);
+                });
+            },
+
+            addEventListeners() {
+                document.getElementById('nextBtn').addEventListener('click', () => this.next());
+                document.getElementById('prevBtn').addEventListener('click', () => this.prev());
+                
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowRight') this.next();
+                    if (e.key === 'ArrowLeft') this.prev();
+                });
+
+                // Pause autoplay on hover
+                document.querySelector('.slider-container').addEventListener('mouseenter', () => {
+                    this.stopAutoplay();
+                });
+
+                document.querySelector('.slider-container').addEventListener('mouseleave', () => {
+                    this.startAutoplay();
+                });
+            },
+
+            update() {
+                this.slides.forEach((slide, idx) => {
+                    slide.classList.remove('active', 'left', 'right');
+                    if (idx === this.current) {
+                        slide.classList.add('active');
+                    } else if (idx === (this.current - 1 + this.slides.length) % this.slides.length) {
+                        slide.classList.add('left');
+                    } else if (idx === (this.current + 1) % this.slides.length) {
+                        slide.classList.add('right');
+                    }
+                });
+
+                // Update dots
+                document.querySelectorAll('.slider-dot').forEach((dot, idx) => {
+                    dot.classList.toggle('active', idx === this.current);
+                });
+            },
+
+            next() {
+                this.current = (this.current + 1) % this.slides.length;
+                this.update();
+            },
+
+            prev() {
+                this.current = (this.current - 1 + this.slides.length) % this.slides.length;
+                this.update();
+            },
+
+            goTo(index) {
+                this.current = index;
+                this.update();
+            },
+
+            startAutoplay() {
+                this.stopAutoplay();
+                this.autoplayInterval = setInterval(() => this.next(), 5000);
+            },
+
+            stopAutoplay() {
+                if (this.autoplayInterval) {
+                    clearInterval(this.autoplayInterval);
+                    this.autoplayInterval = null;
+                }
+            }
+        };
+
+        // Initialize the slider
+        slider.init();
+    </script>
+</body>
+</html>

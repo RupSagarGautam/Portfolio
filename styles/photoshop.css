@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background: linear-gradient(135deg, #0f1729 0%, #1a2537 100%);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #f5f6fa;
+    }
+
+/* Content Wrapper Styles */
+.content-wrapper {
+    padding-top: 100px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-title {
+    margin-top: 50px;
+    position: absolute;
+    top: 40px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    letter-spacing: 1px;
+}
+
+/* Slider Container Styles */
+.slider-container {
+    position: relative;
+    width: 90vw;
+    max-width: 1400px;
+    height: 80vh;
+    min-height: 600px;
+    perspective: 1200px;
+    overflow: visible;
+    background: rgba(20, 30, 48, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 32px;
+    box-shadow: 0 25px 80px rgba(0,0,0,0.35);
+    padding: 32px 0;
+    
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+/* Slide Styles */
+.slide {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 800px;
+    height: 533px; /* Maintaining aspect ratio for typical photography */
+    border-radius: 24px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+    background: #232946;
+    transition: all 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+    overflow: hidden;
+
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keep cover for thumbnails */
+    border-radius: 24px;
+    transition: transform 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
+    border: 2px solid rgb(231, 221, 221);
+    cursor: zoom-in;
+    cursor: pointer;
+}
+
+.slide-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    color: #fff;
+    border-radius: 0 0 24px 24px;
+    transform: translateY(100%);
+    transition: transform 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.slide-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition-delay: 0.1s;
+}
+
+/* Active Slide States */
+.slide.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 10;
+    border: 3px solid rgb(200, 183, 228);
+    transition: 0.7s ;
+    
+}
+
+.slide.active img {
+    transform: scale(1.05);
+    transition: 0.7s ;
+}
+
+.slide.active .slide-content {
+    transform: translateY(0);
+}
+
+.slide.active .slide-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide.left {
+    opacity: 0.7;
+    transform: translate(calc(-50% - 360px), -50%) scale(0.85) rotateY(9deg);
+    z-index: 5;
+}
+
+.slide.right {
+    opacity: 0.7;
+    transform: translate(calc(-50% + 360px), -50%) scale(0.85) rotateY(-9deg);
+    z-index: 5;
+}
+
+/* Navigation Controls */
+.slider-nav {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    z-index: 30;
+}
+
+.slider-arrow {
+    width: 54px;
+    height: 54px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+.slider-arrow:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.1);
+}
+
+.slider-dots {
+    display: flex;
+    gap: 12px;
+    margin: 0 20px;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-dot.active {
+    background: #fff;
+    transform: scale(1.2);
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lightbox-close:hover {
+    color: #00c3ff;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .slide {
+        width: 600px;
+        height: 400px;
+    }
+    .slide.left { 
+        transform: translate(calc(-50% - 400px), -50%) scale(0.85) rotateY(9deg); 
+    }
+    .slide.right { 
+        transform: translate(calc(-50% + 400px), -50%) scale(0.85) rotateY(-9deg); 
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-container {
+        width: 90vw;
+        height: 60vh;
+        min-height: 300px;
+        padding: 20px 0;
+    }
+    .slide {
+        width: 85vw;
+        max-width: 400px;
+        height: calc((85vw * 9) / 16);
+        max-height: 225px;
+    }
+    .slide.left { 
+        transform: translate(-50%, -50%) scale(0.7); 
+        opacity: 0; 
+    }
+    .slide.right { 
+        transform: translate(-50%, -50%) scale(0.7); 
+        opacity: 0; 
+    }
+    .slide-title { 
+        font-size: 1.2rem; 
+    }
+    .slider-nav { 
+        bottom: -60px; 
+    }
+    .page-title {
+        font-size: 2rem;
+        top: 20px;
+    }
+    .lightbox {
+        padding: 1rem;
+    }
+    
+    .lightbox-content {
+        max-width: 100%;
+        max-height: 80vh;
+    }
+    
+    .lightbox-close {
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+    }
+}
