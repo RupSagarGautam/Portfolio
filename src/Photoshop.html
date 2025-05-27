@@ -217,6 +217,8 @@
             slides: document.querySelectorAll('.slide'),
             current: 0,
             autoplayInterval: null,
+            touchStartX: 0,
+            touchEndX: 0,
 
             init() {
                 this.createDots();
@@ -247,14 +249,50 @@
                     if (e.key === 'ArrowLeft') this.prev();
                 });
 
-                // Pause autoplay on hover
-                document.querySelector('.slider-container').addEventListener('mouseenter', () => {
+                // Touch events for mobile
+                const sliderContainer = document.querySelector('.slider-container');
+                
+                sliderContainer.addEventListener('touchstart', (e) => {
+                    this.touchStartX = e.touches[0].clientX;
+                }, { passive: true });
+
+                sliderContainer.addEventListener('touchend', (e) => {
+                    this.touchEndX = e.changedTouches[0].clientX;
+                    this.handleSwipe();
+                }, { passive: true });
+
+                // Mouse events for desktop touch simulation
+                sliderContainer.addEventListener('mousedown', (e) => {
+                    this.touchStartX = e.clientX;
+                    const handleMouseUp = (e) => {
+                        this.touchEndX = e.clientX;
+                        this.handleSwipe();
+                        document.removeEventListener('mouseup', handleMouseUp);
+                    };
+                    document.addEventListener('mouseup', handleMouseUp);
+                });
+
+                // Pause autoplay on hover/touch
+                sliderContainer.addEventListener('mouseenter', () => {
                     this.stopAutoplay();
                 });
 
-                document.querySelector('.slider-container').addEventListener('mouseleave', () => {
+                sliderContainer.addEventListener('mouseleave', () => {
                     this.startAutoplay();
                 });
+            },
+
+            handleSwipe() {
+                const swipeThreshold = 50; // minimum distance for swipe
+                const swipeDistance = this.touchEndX - this.touchStartX;
+
+                if (Math.abs(swipeDistance) > swipeThreshold) {
+                    if (swipeDistance > 0) {
+                        this.prev();
+                    } else {
+                        this.next();
+                    }
+                }
             },
 
             update() {

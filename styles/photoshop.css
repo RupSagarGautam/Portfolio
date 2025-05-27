@@ -505,3 +505,93 @@ nav {
     color: rgb(215, 221, 250);
     transform: scale(1.05);
 }
+
+/* Additional Responsive Design for Small Devices */
+@media (max-width: 480px) {
+    .slider-container {
+        width: 95vw;
+        height: 50vh;
+        min-height: 250px;
+        padding: 15px 0;
+        border-radius: 20px;
+        touch-action: pan-y pinch-zoom;
+    }
+
+    .slide {
+        width: 90vw;
+        max-width: 300px;
+        height: calc((90vw * 9) / 16);
+        max-height: 180px;
+        border-radius: 16px;
+        touch-action: pan-y pinch-zoom;
+    }
+
+    .slide img {
+        border-width: 2px;
+    }
+
+    .slide-content {
+        padding: 15px;
+    }
+
+    .slide-title {
+        font-size: 1rem;
+    }
+
+    .slider-nav {
+        bottom: -50px;
+        gap: 10px;
+    }
+
+    /* Hide navigation arrows on small devices */
+    .slider-arrow {
+        display: none;
+    }
+
+    .slider-dots {
+        gap: 8px;
+    }
+
+    .slider-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+        top: 15px;
+    }
+
+    .lightbox {
+        padding: 0.5rem;
+    }
+
+    .lightbox-content {
+        max-width: 95%;
+        max-height: 70vh;
+    }
+
+    .lightbox-close {
+        top: 5px;
+        right: 15px;
+        font-size: 25px;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links li a {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    nav {
+        height: 60px;
+        padding: 0 1rem;
+    }
+
+    .left {
+        font-size: 1.2rem;
+    }
+}
