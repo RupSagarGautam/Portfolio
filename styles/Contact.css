@@ -35,6 +35,7 @@
 .contactInfo p {
     margin-bottom: 2rem;
     line-height: 1.8;
+    color: #8892b0;
 }
 
 .contactDetails {
@@ -47,7 +48,7 @@
     margin-bottom: 1rem;
 }
 
-.contactItem i {
+.contactItem span {
     color: #64ffda;
     margin-right: 1rem;
     font-size: 1.2rem;
@@ -146,6 +147,7 @@
 .socialLinks p {
     color: #888;
     margin-bottom: 1.5rem;
+    margin-top: 24px;
 }
 
 .social-links {
