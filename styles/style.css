@@ -58,8 +58,13 @@ nav ul li a:hover {
 }
 
 .left {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
+  letter-spacing: 3px;
+  color:#d4d9ff;
+  border: #ccd6f6 2px solid;
+  padding: 0.5rem 1rem;
+  text-shadow: #ccd6f6 2px solid;
 }
 
 .right {
@@ -122,6 +127,8 @@ main {
 .btn:hover {
   background-color: #fff;
   color: #1e2167;
+  transform: scale(1.15);
+  font-weight:500;
 }
 
 .rightsection {
