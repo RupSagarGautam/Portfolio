@@ -124,11 +124,27 @@
     cursor: pointer;
     transition: all 0.3s ease;
     width: 100%;
+    position: relative;
+    display: inline-block;
+
 }
 
 .submitBtn:hover {
     background-color: rgba(100, 255, 218, 0.1);
+    opacity: 60%;
+    transform: translateY(-2px);
+    color: #64ffda;
+    border-color: #64ffda;
+    cursor: not-allowed;
 }
+
+
+.note{
+    color: #8892b0;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
 
 .socialLinks {
     margin-top: 2rem;
