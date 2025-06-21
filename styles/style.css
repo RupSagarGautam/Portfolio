@@ -609,6 +609,9 @@ footer {
     position: relative;
     z-index: 2;
 }
+.lineheight{
+  margin: 100px;
+}
 
 /* Responsive adjustments */
 @media screen and (max-width: 992px) {

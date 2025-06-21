@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Time in Nepal</title>
+    <!-- Himalaya font for Nepalese style heading -->
+    <link href="https://fonts.cdnfonts.com/css/himalaya" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(0, 0, 33);
+            width: 100vw;
+            height: 100vh;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #time_is_link {
+             font-family: "Lavishly Yours", cursive;
+            font-style: normal;
+            font-size: 7vw !important;
+            color: #f5f9f6 !important;
+            margin-bottom: 60px !important;
+            letter-spacing: 2px;
+            text-align: center;
+            text-shadow: 1px 2px 6px #b3b3b3;
+            text-decoration: none !important;
+            pointer-events: none;
+            cursor: default;
+            display: block;
+        }
+
+        #Nepal_z423 {
+            font-family: 'Lavishly' !important;
+            font-size: 8vw !important;
+            color: #333 !important;
+            font-weight: 900 !important;
+            letter-spacing: 4px;
+            text-align: center;
+            color: #f5f9f6 !important;
+            line-height: 1;
+            background-color: #1e2067;
+            border-radius: 24px;
+            padding: 32px 64px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://time.is/Nepal" id="time_is_link" rel="nofollow" style="font-size:36px">Time in Nepal: </a>
+    <span id="Nepal_z423" style="font-size:36px"></span>
+    <script src="//widget.time.is/t.js"></script>
+    <script>
+        time_is_widget.init({ Nepal_z423: {} });
+    </script>
+</body>
+
+</html>
