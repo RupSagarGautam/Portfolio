@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: "Poppins", sans-serif;
+            padding-top: 80px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(14, 14, 62);
+            padding: 0 2rem;
+            height: 80px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            transition: 0.5s;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+        }
+
+        .nav-links a:hover {
+            color: rgb(23, 23, 78);
+            background-color: rgb(215, 221, 250);
+            font-size: 13px;
+            font-weight: 600;
+            transform: scale(1.1);
+            border-radius: 40px;
+        }
+
+        /* Navigation active state */
+        .nav-links a.active {
+            background-color: #1e2167 !important;
+            color: white !important;
+            padding: 8px 16px !important;
+            border-radius: 40px !important;
+            transition: all 0.3s ease !important;
+            font-weight: 600 !important;
+            font-size: 13px !important;
+            transform: scale(1.1) !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+            border: 2px solid #64ffda !important;
+            text-decoration: none !important;
+        }
+
+        .nav-links a.active:hover {
+            background-color: #2a2f8a !important;
+            transform: scale(1.15) !important;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        #home { background-color: #0a192f; }
+        #about { background-color: #112240; }
+        #contact { background-color: #1e2167; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="left">Test Navigation</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Home Section</h1>
+    </section>
+
+    <section id="about">
+        <h1>About Section</h1>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Section</h1>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll(".nav-links a");
+
+            // Function to apply active styles directly
+            function applyActiveStyles(link) {
+                link.style.backgroundColor = '#1e2167';
+                link.style.color = 'white';
+                link.style.padding = '8px 16px';
+                link.style.borderRadius = '40px';
+                link.style.fontWeight = '600';
+                link.style.fontSize = '13px';
+                link.style.transform = 'scale(1.1)';
+                link.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.2)';
+                link.style.border = '2px solid #64ffda';
+                link.style.textDecoration = 'none';
+                link.style.transition = 'all 0.3s ease';
+            }
+
+            // Function to remove active styles
+            function removeActiveStyles(link) {
+                link.style.backgroundColor = '';
+                link.style.color = '';
+                link.style.padding = '';
+                link.style.borderRadius = '';
+                link.style.fontWeight = '';
+                link.style.fontSize = '';
+                link.style.transform = '';
+                link.style.boxShadow = '';
+                link.style.border = '';
+                link.style.textDecoration = '';
+                link.style.transition = '';
+            }
+
+            // Function to update active navigation
+            function updateActiveNav(currentSectionId) {
+                console.log('Updating active nav for section:', currentSectionId);
+                navLinks.forEach(link => {
+                    // Remove active class and styles
+                    link.classList.remove("active");
+                    removeActiveStyles(link);
+                    
+                    if (link.getAttribute("href") === `#${currentSectionId}`) {
+                        link.classList.add("active");
+                        // Apply inline styles as fallback
+                        applyActiveStyles(link);
+                        console.log(`Active class added to: ${link.textContent} (${currentSectionId})`);
+                    }
+                });
+            }
+
+            // Add click handlers
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').slice(1);
+                    console.log('Clicked:', targetId);
+                    updateActiveNav(targetId);
+                    
+                    // Scroll to section
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Test functions
+            window.testContact = function() {
+                console.log('Testing contact active state');
+                updateActiveNav('contact');
+            };
+
+            window.testHome = function() {
+                console.log('Testing home active state');
+                updateActiveNav('home');
+            };
+
+            window.testAbout = function() {
+                console.log('Testing about active state');
+                updateActiveNav('about');
+            };
+
+            window.debugStyles = function() {
+                navLinks.forEach((link, index) => {
+                    console.log(`Link ${index + 1}:`, link.textContent);
+                    console.log('  - classes:', link.className);
+                    console.log('  - has active class:', link.classList.contains('active'));
+                    const computedStyle = window.getComputedStyle(link);
+                    console.log('  - background-color:', computedStyle.backgroundColor);
+                    console.log('  - color:', computedStyle.color);
+                    console.log('  - border:', computedStyle.border);
+                });
+            };
+
+            // Set initial active state
+            updateActiveNav('home');
+        });
+    </script>
+</body>
+</html> 
