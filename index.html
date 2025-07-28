@@ -4,49 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSG</title>
+    <title>RSG Portfolio</title>
 
-    <link rel="StyleSheet" href="../styles/style.css">
-    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <script src="js/script.js"></script>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
     <header>
         <nav>
-            <div class="left" >Rup Sagar Gautam</div>
+            <div class="left">Rup Sagar Gautam</div>
             <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <div class="right"> <span id="element1"></span></div>
+            <div class="right"><span id="element1"></span></div>
             <ul class="nav-links">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/src/About.html">About</a></li>
-                <li><a href="/src/Projects.html">Projects</a></li>
-                <li><a href="/src/Contact.html">Contact Me</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#contact" class="nav-link">Contact Me</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <!-- Resume Modal -->
-        <div id="resumeModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h2>Download Resume</h2>
-                <div class="resume-preview">
-                    <img src="assets/Dev.png" alt="Resume Preview">
-                </div>
-                <div class="modal-buttons">
-                    <a href="/docs/Resume.pdf" download class="btn">Download PDF</a>
-                    <button class="btn close-btn">Close</button>
-                </div>
-            </div>
-        </div>
 
+    <!-- Home Section -->
+    <section id="home">
         <section class="firstSection">
             <div class="leftsection">
                 Namaste, My Name is 
@@ -54,21 +47,18 @@
                 <div> & I am a Passionate</div>
                 <span id="element"></span>
                 <div class="buttons">
-                    <a href="/docs/Resume.pdf" target="_main"><button class="btn">Download Resume</button></a>
-                    <a href="https://github.com/RupSagarGautam" target="_main"><button class="btn">Visit
-                            GitHub</button></a>
+                    <a href="docs/Resume.pdf" target="_main"><button class="btn">Download Resume</button></a>
+                    <a href="https://github.com/RupSagarGautam" target="_main"><button class="btn">Visit GitHub</button></a>
                 </div>
             </div>
+            <div class="rightsection">
+                <img src="assets/Dev.png" alt="Developer">
             </div>
-            <div class="rightsection"> <img src="assets/Dev.png"> </div>
         </section>
-
         <hr>
-
         <section class="secondsection">
             <span class="text-grey">What I have Done So Far</span>
             <h1>Work Experience</h1>
-
             <div class="box">
                 <div class="vertical">
                     <img class="image-top" src="assets/Graphics Designer.png" alt="Graphics Design">
@@ -118,18 +108,397 @@
 
 
         </section>
+    </section>
 
-    </main>
-        <br>
-    </div>
-<iframe src="/src/time.html" width="100%" height="500px" style="border:none;"></iframe>
-<br>
-<div class="lineheight">
-</div>
-<br>    
-<footer>
+    <!-- About Section -->
+    <section id="about">
+        <section class="aboutSection">
+            <div class="aboutContent">
+                <h1>About Me</h1>
+                <div class="aboutImage">
+                    <img src="assets/RSG.jpg" alt="Rupsagar Gautam">
+                </div>
+                <div class="aboutText">
+                    <h2>Rupsagar Gautam</h2>
+                    <p class="tagline">Creative Professional & Digital Artist</p>
+                    
+                    <div class="aboutDescription">
+                        <p>I am a creative professional from Nepal, passionate about bringing ideas to life through visual design and digital media. With a strong foundation in both graphics design and video editing, I specialize in creating compelling visual content that engages and inspires.</p>
+                        
+                        <h3>Professional Journey</h3>
+                        <p>My journey in the creative industry began with a passion for visual storytelling. I've had the privilege of working with organizations like Nepalese Esports Junction, where I've contributed to creating engaging digital content and promotional materials.</p>
+                        
+                        <h3>Expertise</h3>
+                        <ul class="expertiseList">
+                            <li>Graphics Design</li>
+                            <li>Video Editing</li>
+                            <li>Animation</li>
+                            <li>Social Media Content</li>
+                            <li>Thumbnail Design</li>
+                            <li>Banner Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <section class="projectsSection">
+            <div class="projectsContent">
+                <h1>My Projects</h1>
+                <p class="projectsIntro">A collection of my creative work across different mediums.</p>
+
+                <div class="projectsGrid">
+                    <!-- Development Projects -->
+                    <div class="projectCategory" id="development">
+                        <h2>Development</h2>
+                        <div class="projectItems">
+                            <div class="projectItem">
+                                <a href="https://zebpayrsg.netlify.app/" target="_blank">
+                                    <img src="assets/zebpay.jpg" alt="Graphics Design Project">
+                                    <div class="projectInfo">
+                                        <h3>ZebPay Webpage</h3>
+                                        <p>Personal Practice Project based on zebpay webpage.
+                                            Used API to fetch data from Real Time Crypto Exchange.
+                                        </p>
+                                        <div class="projectTags">
+                                            <span>HTML</span>
+                                            <span>CSS</span>
+                                            <span>JavaScript</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="projectItem">
+                                <a href="https://github.com/RupSagarGautam/Elearning_Webpage" target="_blank">
+                                    <img src="assets/Developer.png" alt="Social Media Design">
+                                    <div class="projectInfo">
+                                        <h3>E-Learning WebPage</h3>
+                                        <p>Second Year Project, Full Stack Development. Signup, Login Authentication,
+                                            Admin Dashboard, CRUD Operations, and more.
+                                        </p>
+                                        <div class="projectTags">
+                                            <span>Django</span>
+                                            <span>HTML</span>
+                                            <span>CSS</span>
+                                            <span>JavaScript</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photography Projects -->
+                    <div class="projectCategory" id="photography">
+                        <h2>Photography</h2>
+                        <div class="projectItems">
+                            <div class="projectItem">
+                                <a href="src/Photoshop.html" target="_blank">
+                                    <img src="assets/Photography/Thumbnail.png" alt="Photography Project">
+                                    <div class="projectInfo">
+                                        <h3>Wedding Photography</h3>
+                                        <p>Captured precious moments at various wedding ceremonies.</p>
+                                        <div class="projectTags">
+                                            <span>Portrait</span>
+                                            <span>Event</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="projectItem">
+                                <a href="src/update.html"> 
+                                    <img src="assets/photographer.png" alt="Event Photography">
+                                    <div class="projectInfo">
+                                        <h3>Event Coverage</h3>
+                                        <p>Documented various events and ceremonies.</p>
+                                        <div class="projectTags">
+                                            <span>Event</span>
+                                            <span>Documentary</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Graphics Design Projects -->
+                    <div class="projectCategory" id="graphics">
+                        <h2>Graphics Design</h2>
+                        <div class="projectItems">
+                            <div class="projectItem">
+                                <a href="src/update.html"> 
+                                    <img src="assets/NEJ.png" alt="Graphics Design Project">
+                                    <div class="projectInfo">
+                                        <h3>Esports Tournament Banners</h3>
+                                        <p>Created promotional banners and social media graphics for Nepalese Esports
+                                            Junction tournaments.</p>
+                                        <div class="projectTags">
+                                            <span>Photoshop</span>
+                                            <span>Illustrator</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="projectItem">
+                                <a href="src/Graphics.html" target="_blank"> 
+                                    <img src="assets/Graphics Designer.png" alt="Social Media Design">
+                                    <div class="projectInfo">
+                                        <h3>Social Media Campaign</h3>
+                                        <p>Designed engaging social media posts and stories for various clients.</p>
+                                        <div class="projectTags">
+                                            <span>Social Media</span>
+                                            <span>Branding</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Editing Projects -->
+                    <div class="projectCategory" id="video">
+                        <h2>Video Editing</h2>
+                        <div class="projectItems">
+                            <div class="projectItem">
+                                <a href="src/update.html"> 
+                                    <img src="assets/Video Editor.png" alt="Video Editing Project">
+                                    <div class="projectInfo">
+                                        <h3>Tournament Highlights</h3>
+                                        <p>Edited and produced highlight reels for esports tournaments.</p>
+                                        <div class="projectTags">
+                                            <span>Premiere Pro</span>
+                                            <span>After Effects</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="projectItem">
+                                <a href="src/update.html"> 
+                                    <img src="assets/Video Editor.png" alt="Promotional Video">
+                                    <div class="projectInfo">
+                                        <h3>Promotional Videos</h3>
+                                        <p>Created promotional and marketing videos for various clients.</p>
+                                        <div class="projectTags">
+                                            <span>Motion Graphics</span>
+                                            <span>Marketing</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates">
+        <section class="certificatesSection">
+            <div class="certificatesContent">
+                <h1>My Certificates</h1>
+                <p class="certificatesIntro">Professional certifications and achievements that validate my skills and expertise.</p>
+
+                <div class="certificatesGrid">
+                    <div class="certificateItem">
+                        <a href="assets/Certification/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20241108-28-2ijrai.pdf" target="_blank">
+                            <img src="assets/Certification/aws_logo.png" alt="AWS Cloud Foundations Certificate">
+                            <div class="certificateInfo">
+                                <h3>AWS Academy Cloud Foundations</h3>
+                                <p>Completed AWS Cloud Foundations certification, covering core AWS services and cloud computing fundamentals.</p>
+                                <div class="certificateTags">
+                                    <span>AWS Cloud</span>
+                                    <span>Cloud Computing</span>
+                                    <span>AWS Services</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="certificateItem">
+                        <a href="assets/Certification/AWS_Academy_Graduate___AWS_Academy_Data_Engineering_Badge20241208-24-cvwilb.pdf" target="_blank">
+                            <img src="assets/Certification/aws_logo.png" alt="AWS Data Engineering Certificate">
+                            <div class="certificateInfo">
+                                <h3>AWS Data Engineering</h3>
+                                <p>Certified in AWS Data Engineering, specializing in data processing, analytics, and AWS data services.</p>
+                                <div class="certificateTags">
+                                    <span>Data Engineering</span>
+                                    <span>AWS Analytics</span>
+                                    <span>Big Data</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="certificateItem">
+                        <a href="assets/Certification/AWS_Academy_Graduate___AWS_Academy_Machine_Learning_Foundations_Badge20241112-25-mwbw36.pdf" target="_blank">
+                            <img src="assets/Certification/aws_logo.png" alt="AWS ML Foundations Certificate">
+                            <div class="certificateInfo">
+                                <h3>AWS Machine Learning Foundations</h3>
+                                <p>Completed AWS Machine Learning Foundations certification, covering ML concepts and AWS ML services.</p>
+                                <div class="certificateTags">
+                                    <span>Machine Learning</span>
+                                    <span>AWS ML Services</span>
+                                    <span>AI</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="certificateItem">
+                        <a href="assets/Certification/AWS_Academy_Graduate___AWS_Academy_Machine_Learning_for_Natural_Language_Processing_Badge20241208-30-gvfjta.pdf" target="_blank">
+                            <img src="assets/Certification/aws_logo.png" alt="AWS NLP Certificate">
+                            <div class="certificateInfo">
+                                <h3>AWS ML for NLP</h3>
+                                <p>Specialized certification in Natural Language Processing using AWS ML services.</p>
+                                <div class="certificateTags">
+                                    <span>NLP</span>
+                                    <span>AWS ML</span>
+                                    <span>Language AI</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="certificateItem">
+                        <img src="assets/Video Editor.png" alt="Video Editing Certificate">
+                        <div class="certificateInfo">
+                            <h3>Video Editing Professional</h3>
+                            <p>Certified in professional video editing with expertise in Premiere Pro and After Effects.</p>
+                            <div class="certificateTags">
+                                <span>Premiere Pro</span>
+                                <span>After Effects</span>
+                                <span>Motion Graphics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="certificateItem">
+                        <img src="assets/Developer.png" alt="Web Development Certificate">
+                        <div class="certificateInfo">
+                            <h3>Web Development Fundamentals</h3>
+                            <p>Completed web development certification covering HTML, CSS, and JavaScript basics.</p>
+                            <div class="certificateTags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="certificateItem">
+                        <img src="assets/photographer.png" alt="Photography Certificate">
+                        <div class="certificateInfo">
+                            <h3>Professional Photography</h3>
+                            <p>Certified in professional photography techniques and post-processing.</p>
+                            <div class="certificateTags">
+                                <span>Photography</span>
+                                <span>Lightroom</span>
+                                <span>Composition</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="certificateItem">
+                        <img src="assets/Graphics Designer.png" alt="Graphics Design Certificate">
+                        <div class="certificateInfo">
+                            <h3>Graphics Design Mastery</h3>
+                            <p>Completed comprehensive graphics design course covering Adobe Photoshop, Illustrator, and design principles.</p>
+                            <div class="certificateTags">
+                                <span>Adobe Photoshop</span>
+                                <span>Adobe Illustrator</span>
+                                <span>Design Principles</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <section class="contactSection">
+            <div class="contactContent">
+                <h1>Get in Touch</h1>
+                <div class="contactContainer">
+                    <div class="contactInfo">
+                        <h2>Let's Connect</h2>
+                        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+                        
+                        <div class="contactDetails">
+                            <div class="contactItem">
+                                <span class="fas fa-envelope"></span>
+                                <p>Email: rupsagargautam@gmail.com</p>
+                            </div>
+                            <div class="contactItem">
+                                <span class="fas fa-map-marker-alt"></span>
+                                <p>Location: Nepal</p>
+                            </div>
+                        </div>
+
+                        <div class="socialLinks">
+                            <h3>Follow Me</h3>
+                            <p>Connect with me on social media</p>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/rup-sagar-gautam/" target="_blank" class="social-link">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://github.com/RupSagarGautam" target="_blank" class="social-link">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="https://www.youtube.com/@NVAGamingOfficial" target="_blank" class="social-link">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>YouTube</span>
+                                </a>
+                                <a href="https://www.facebook.com/RSGBrandOfficial/" target="_blank" class="social-link">
+                                    <i class="fab fa-facebook"></i>
+                                    <span>Facebook</span>
+                                </a>
+                            </div>
+                            <p class="social-note">Note: Only My Friends Can view Facebook Account.</p>
+                        </div>
+                    </div>
+
+                    <div class="contactForm">
+                        <h2>Send a Message</h2>
+                        <form id="contactForm" onsubmit="return handleSubmit(event)">
+                            <div class="formGroup">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="formGroup">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="formGroup">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="formGroup">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submitBtn" disabled>Send Message</button>
+                            <div class="note">Note: Can't Send Message Currently</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <footer>
         <div class="footer">
-
             <div class="footer-first">
                 <h3 style="font-size: 15px;">RSG's Portfolio</h3>
             </div>
@@ -137,61 +506,45 @@
                 <ul style="text-align: left;">
                     <b style="font-size: 15px; color: aliceblue;">Navigate</b>
                     <br>
-                    <li>    <a href="/index.html" target="_blank" >    Home    </a>   </li>
-                    <li>    <a href="/src/About.html">    About</a>    </li>
-                    <li>    <a href="/src/Contact.html">    Contact </a>    </li>
-                    <li>    <a href="/src/Projects.html">    Projects   </a>    </li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#projects">Projects</a></li>
                 </ul>
             </div>
             <div class="footer-third">
                 <b style="font-size: 15px;">Projects</b>
                 <br><br>
                 <ul>
-                    <li><a href="#"> Past Projects      </a></li>
-                    <li><a href="#"> Current Projects   </a></li>
-                    <li><a href="#"> Upcomming Projects </a></li>
+                    <li><a href="#projects">Past Projects</a></li>
+                    <li><a href="#projects">Current Projects</a></li>
+                    <li><a href="#projects">Upcoming Projects</a></li>
                 </ul>
-               
             </div>
             <div class="footer-fourth">
                 Feedback
-                <button class="Feedbackbtn" id="FeedbackBtn" onclick="form()"  > Click Here</button>
-                <script>
-                        document.getElementById("FeedbackBtn").onclick = function () 
-                        {
-                        location.href = "https://forms.gle/6girrRuoeGDbSVxm8";
-                        
-                        }
-    
-                </script>
-
-                
+                <button class="Feedbackbtn" id="FeedbackBtn" onclick="form()">Click Here</button>
             </div>
         </div>
-
         <div class="text-center">
-            Copyright © rupsagargautam.com.np | All Rights Reserverd 2024-26
+            Copyright © rupsagargautam.com.np | All Rights Reserved 2024-26
         </div>
-
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Typed.js initialization
+        // var typed = new Typed('#element', {
+        //     strings: ['Web Developer.', 'Graphic Designer.', 'Video Editor.', 'Photographer.'],
+        //     typeSpeed: 100,
+        // });
 
-
-</head>
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
-<script>
-    var typed = new Typed('#element', {
-        strings: ['Web Developer.', 'Graphic Designer.', 'Video Editor.', 'Photographer.'],
-        typeSpeed: 100,
-    });
-</script>
-
-
-
-
-<body>
-
+        // Feedback form function
+        function form() {
+            location.href = "https://forms.gle/6girrRuoeGDbSVxm8";
+        }
+    </script>
 </body>
-
 </html>
